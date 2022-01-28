@@ -1,6 +1,6 @@
 # Creating an IKS cluster in Intersight using Terraform open source
 
-This simple terraform plan for Intersight creates the minimum required pools and policies so that it can also create and deploy a kubernetes cluster profile
+This simple terraform plan for Intersight creates an IP pool for the k8s nodes and a number of policies so that it can subsequently create a kubernetes cluster profile and optionally deploy it for you.
 
 ### Directions
 
