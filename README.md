@@ -6,10 +6,12 @@ This simple terraform plan for Intersight creates an IP pool for the k8s nodes a
 
 1. Create a file called `terraform.tfvars` file and put in it:
 
-```apikey       = "replace_with_your_api_key"
+```
+apikey       = "replace_with_your_api_key"
 secretkey    = "SecretKey.txt"
 vc_password  = "replace_with_your_vc_password"
 ssh_user     = "iksadmin"
+# ssh key can be made with: ssh-keygen -t ecdsa -b 521 -f mykey  
 ssh_key      = "replace_with_your_ssh_key"
 
 tags = [
@@ -23,6 +25,7 @@ tags = [
   }
 ]
 organization = "default"
+```
 
 
 2. Then edit `main.tf` and put in your cluster info following the examples that are currently in the file.
