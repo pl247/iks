@@ -5,3 +5,4 @@
 *backup
 .terraform*
 SecretKey.txt
+terraform.tfvars
