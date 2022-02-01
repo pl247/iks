@@ -36,3 +36,7 @@ Execute your Terraform plan using the following commands:
    - terraform init
    - terraform plan
    - terraform apply
+   
+### Removing a cluster using Terraform
+
+You can remove the cluster using the `terraform destroy` command, but the pool delete will error out. This is because the pool IPs will still be in use while the cluster is unconfiguring in Intersight. As a workaround, just wait until the unconfigure task completes and then run the destroy again and the pool will be removed.

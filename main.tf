@@ -25,8 +25,8 @@ module "iks_cluster" {
   ip_pool = {
     use_existing        = false
     name                = "red-pool"
-    ip_starting_address = "172.22.100.100"
-    ip_pool_size        = "100"
+    ip_starting_address = "172.22.100.200"
+    ip_pool_size        = "50"
     ip_netmask          = "255.255.255.0"
     ip_gateway          = "172.22.100.1"
     dns_servers         = ["172.22.16.254"]
