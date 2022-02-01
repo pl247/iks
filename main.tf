@@ -25,16 +25,16 @@ module "iks_cluster" {
   ip_pool = {
     use_existing        = false
     name                = "red-pool"
-    ip_starting_address = "192.168.253.100"
+    ip_starting_address = "172.22.100.100"
     ip_pool_size        = "100"
     ip_netmask          = "255.255.255.0"
-    ip_gateway          = "192.168.253.1"
+    ip_gateway          = "172.22.100.1"
     dns_servers         = ["172.22.16.254"]
   }
 
   sysconfig = {
     use_existing = false
-    name         = "red"
+    name         = "red-dns-ntp"
     domain_name  = "wpglab.ca"
     timezone     = "America/Winnipeg"
     ntp_servers  = ["172.22.16.254"]
@@ -44,8 +44,8 @@ module "iks_cluster" {
   k8s_network = {
     use_existing = false
     name         = "red-pod-service-cidr"
-    pod_cidr     = "100.65.0.0/16"
-    service_cidr = "100.64.0.0/24"
+    pod_cidr     = "100.63.0.0/16"
+    service_cidr = "100.62.0.0/24"
     cni          = "Calico"
   }
   # Version policy
