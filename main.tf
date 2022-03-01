@@ -6,7 +6,7 @@ provider "intersight" {
 
 module "iks_cluster" {
   source = "terraform-cisco-modules/iks/intersight//"
-  version = "2.2.0"
+  version = "2.3.0"
 
 # Kubernetes Cluster Profile
   cluster = {
@@ -71,6 +71,7 @@ module "iks_cluster" {
     use_existing    = false
     platformType = "esxi"
     #platformType "iwe" or "esxi"
+    #targetName = "test"
     policyName      = "red-vminfra"
     vcTargetName   = "172.22.163.101"
     interfaces    = ["k8s-100"]
