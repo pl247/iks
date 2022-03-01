@@ -44,4 +44,4 @@ You can remove the cluster using the `terraform destroy` command, but the pool d
 ### Updates
 
 - updated terraform version to 1.1
-- updated intersight provider to 1.0.22
+- updated intersight provider to 1.0.23
